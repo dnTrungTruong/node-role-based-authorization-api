@@ -22,6 +22,7 @@ function authorize(roles = []) {
             }
 
             // authentication and authorization successful
+            res.locals.user = req.user;
             next();
         }
     ];
